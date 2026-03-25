@@ -1,0 +1,1 @@
+USE Universidad;docker exec -it BDUniversidad mysql -u root -p1234

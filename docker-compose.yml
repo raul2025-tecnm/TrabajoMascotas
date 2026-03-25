@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  db-veterinaria:
+    image: mysql:8.0
+    container_name: db-veterinaria
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: veterinaria
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: always
